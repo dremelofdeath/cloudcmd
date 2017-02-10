@@ -17,7 +17,6 @@ const pluginer = require(DIR + 'plugins');
 const apart = require('apart');
 const join = require('join-io');
 const ponse = require('ponse');
-const mollify = require('mollify');
 const restafary = require('restafary/legacy');
 const konsole = require('console-io/legacy');
 const edward = require('edward/legacy');
@@ -266,11 +265,6 @@ function cloudcmd(prefix, plugins) {
         join({
             dir     : DIR_ROOT,
             minify,
-        }),
-        
-        mollify({
-            dir : DIR_ROOT,
-            is  : minify,
         }),
         
         pluginer(plugins),
