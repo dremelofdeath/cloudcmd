@@ -255,7 +255,33 @@ function ListenersProto(Util, DOM, CloudFunc, CloudCmd) {
             
             event.preventDefault();
         } else {
-            if (path.endsWith(".md")) {
+            if (path == ".gitignore"
+                    || path.endsWith(".java")
+                    || path.endsWith(".xml")
+                    || path.endsWith(".cfg")
+                    || path.endsWith(".cpp")
+                    || path.endsWith(".c")
+                    || path.endsWith(".cxx")
+                    || path.endsWith(".c++")
+                    || path.endsWith(".m")
+                    || path.endsWith(".h")
+                    || path.endsWith(".json")
+                    || path.endsWith(".js")
+                    || path.endsWith(".yml")
+                    || path.endsWith(".py")
+                    || path.endsWith(".sh")
+                    || path.endsWith(".go")
+                    || path.endsWith(".php")
+                    || path.endsWith(".vim")
+                    || path.endsWith(".as")
+                    || path.endsWith(".hx")
+                    || path.endsWith(".hxml")
+                    || path.endsWith(".sln")
+                    || path.endsWith(".ini")
+                    || path.endsWith(".rb")
+                    || path.endsWith(".lua")) {
+                CloudCmd.EditFile.show();
+            } else if (path.endsWith(".md")) {
                 CloudCmd.Markdown.show(path);
             } else if (path.endsWith(".html")) {
                 window.open(DOM.getCurrentLink().href, "_blank");
