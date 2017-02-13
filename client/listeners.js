@@ -254,6 +254,14 @@ function ListenersProto(Util, DOM, CloudFunc, CloudCmd) {
             });
             
             event.preventDefault();
+        } else {
+            if (path.endsWith(".md")) {
+                CloudCmd.Markdown.show(path);
+            } else if (path.endsWith(".html")) {
+                window.open(DOM.getCurrentLink().href, "_blank");
+            } else {
+                CloudCmd.View.show();
+            }
         }
     }
     
